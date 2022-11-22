@@ -1,12 +1,10 @@
 import './App.css';
-import Card from './components/Card'
+import UserForm from './components/forms/UserForm';
 
 function App() {
   return (
     <div className="App">
-      <Card>
-        <div>Hello World</div>
-      </Card>
+      <UserForm/>
     </div>
   );
 }
