@@ -1,8 +1,13 @@
 .card {
     display: flex;
-    justify-content: center;
     border: 1px solid black;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 5px;
+}
+
+.card * {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
 }
