@@ -9,5 +9,10 @@
 .card * {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     margin: 5px;
+}
+
+.card * .submit-button{
+    max-width: fit-content;
 }
