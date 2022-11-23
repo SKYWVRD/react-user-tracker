@@ -4,6 +4,7 @@
     max-width: 600px;
     margin: 0 auto;
     border-radius: 5px;
+    box-shadow: 3px 3px;
 }
 
 .card * {
