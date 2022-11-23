@@ -1,0 +1,8 @@
+.Users {
+    list-style: none;
+    padding: 0;
+}
+
+.Users * {
+    margin: 2px;
+}
