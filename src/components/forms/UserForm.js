@@ -1,7 +1,7 @@
 import react, { useState } from "react";
 import Card from "../Card";
 
-const UserForm = () => {
+const UserForm = (props) => {
   const [userName, setUsername] = useState("");
   const [userAge, setUserAge] = useState(18);
 
@@ -13,9 +13,17 @@ const UserForm = () => {
     setUserAge(event.target.value);
   };
 
+  const submitUserHandler = (event) => {
+    event.preventDefault();
+    props.addUsers({
+      username: userName,
+      age: userAge
+    })
+  }
+
   return (
     <Card>
-      <form>
+      <form onSubmit={submitUserHandler}>
         <label htmlFor="username">Username</label>
         <input type="text" onChange={userNameChangeHandler}></input>
         <label htmlFor="age">Age</label>

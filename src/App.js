@@ -1,20 +1,22 @@
-import React, { useState } from 'react'
-import './App.css';
-import UserForm from './components/forms/UserForm';
-import Users from './components/users/Users';
+import React, { useState } from "react";
+import "./App.css";
+import UserForm from "./components/forms/UserForm";
+import Users from "./components/users/Users";
 
 function App() {
-
-  const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([]);
 
   const addUserHandler = (newUser) => {
-    setUsers(newUser, ...users);
-  }
+    setUsers((prevUsers) => {
+      return [newUser, ...prevUsers];
+    });
+    
+  };
 
   return (
     <div className="App">
-      <UserForm/>
-      <Users addUsers={addUserHandler}/>
+      <UserForm addUsers={addUserHandler} />
+      <Users userList={users} />
     </div>
   );
 }
