@@ -16,6 +16,7 @@ const UserForm = (props) => {
   const submitUserHandler = (event) => {
     event.preventDefault();
     props.addUsers({
+      id: Math.random(),
       username: userName,
       age: userAge
     })
