@@ -18,9 +18,9 @@ const UserForm = (props) => {
     props.addUsers({
       id: Math.random(),
       username: userName,
-      age: userAge
-    })
-  }
+      age: userAge,
+    });
+  };
 
   return (
     <Card>

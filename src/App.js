@@ -10,7 +10,6 @@ function App() {
     setUsers((prevUsers) => {
       return [newUser, ...prevUsers];
     });
-    
   };
 
   return (

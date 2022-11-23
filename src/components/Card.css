@@ -1,19 +1,19 @@
 .card {
-    display: flex;
-    border: 1px solid black;
-    max-width: 600px;
-    margin: 25px auto;
-    border-radius: 5px;
-    box-shadow: 3px 3px;
+  display: flex;
+  border: 1px solid black;
+  max-width: 600px;
+  margin: 25px auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px;
 }
 
 .card * {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 5px;
 }
 
-.card * .submit-button{
-    max-width: fit-content;
+.card * .submit-button {
+  max-width: fit-content;
 }
