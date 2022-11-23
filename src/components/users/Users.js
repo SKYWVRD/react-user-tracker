@@ -1,11 +1,12 @@
 import react from 'react'
+import Card from '../Card'
 
 const Users = () => {
 
     return (
-        <div>
-
-        </div>
+        <Card>
+            <div>Testing</div>
+        </Card>
     )
 }
 
