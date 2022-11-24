@@ -20,21 +20,30 @@ const UserForm = (props) => {
       username: userName,
       age: userAge,
     });
+    setUserAge('');
+    setUsername('');
   };
 
   return (
     <Card>
       <form onSubmit={submitUserHandler}>
         <label htmlFor="username">Username</label>
-        <input id="username" type="text" onChange={userNameChangeHandler}></input>
+        <input
+          id="username"
+          type="text"
+          value={userName}
+          onChange={userNameChangeHandler}
+        ></input>
         <label htmlFor="age">Age</label>
         <input
           id="age"
           type="number"
-          defaultValue={userAge}
+          value={userAge}
           onChange={ageChangeHandler}
         ></input>
-        <button type="submit" className="submit-button">Add User</button>
+        <button type="submit" className="submit-button">
+          Add User
+        </button>
       </form>
     </Card>
   );
