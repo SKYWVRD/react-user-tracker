@@ -26,9 +26,10 @@ const UserForm = (props) => {
     <Card>
       <form onSubmit={submitUserHandler}>
         <label htmlFor="username">Username</label>
-        <input type="text" onChange={userNameChangeHandler}></input>
+        <input id="username" type="text" onChange={userNameChangeHandler}></input>
         <label htmlFor="age">Age</label>
         <input
+          id="age"
           type="number"
           defaultValue={userAge}
           onChange={ageChangeHandler}
