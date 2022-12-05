@@ -12,25 +12,17 @@ const UserForm = (props) => {
       username: nameInputRef.current.value,
       age: ageInputRef.current.value,
     });
-    nameInputRef.current.value = '';
-    ageInputRef.current.value = '';
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
   };
 
   return (
     <Card>
       <form onSubmit={submitUserHandler}>
         <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          ref={nameInputRef}
-        ></input>
+        <input id="username" type="text" ref={nameInputRef}></input>
         <label htmlFor="age">Age</label>
-        <input
-          id="age"
-          type="number"
-          ref={ageInputRef}
-        ></input>
+        <input id="age" type="number" ref={ageInputRef}></input>
         <button type="submit" className="submit-button">
           Add User
         </button>
