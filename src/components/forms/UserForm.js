@@ -1,27 +1,19 @@
-import react, { useState } from "react";
+import react, { useState, useRef } from "react";
 import Card from "../Card";
 
 const UserForm = (props) => {
-  const [userName, setUsername] = useState("");
-  const [userAge, setUserAge] = useState(18);
-
-  const userNameChangeHandler = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const ageChangeHandler = (event) => {
-    setUserAge(event.target.value.toString());
-  };
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
 
   const submitUserHandler = (event) => {
     event.preventDefault();
     props.addUsers({
       id: Math.random(),
-      username: userName,
-      age: userAge,
+      username: nameInputRef.current.value,
+      age: ageInputRef.current.value,
     });
-    setUserAge('');
-    setUsername('');
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = '';
   };
 
   return (
@@ -31,15 +23,13 @@ const UserForm = (props) => {
         <input
           id="username"
           type="text"
-          value={userName}
-          onChange={userNameChangeHandler}
+          ref={nameInputRef}
         ></input>
         <label htmlFor="age">Age</label>
         <input
           id="age"
           type="number"
-          value={userAge}
-          onChange={ageChangeHandler}
+          ref={ageInputRef}
         ></input>
         <button type="submit" className="submit-button">
           Add User
